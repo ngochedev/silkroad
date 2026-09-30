@@ -3,17 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack --experimental-https",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint"
   },
+  "@parcel/bundler-default": {
+    "manualSharedBundles": [
+      {
+        "name": "s2-styles",
+        "types": [
+          "css"
+        ],
+        "assets": [
+          "**/@react-spectrum/s2/**",
+          "src/**/*.{js,jsx,ts,tsx}"
+        ]
+      }
+    ]
+  },
   "dependencies": {
     "@ai-sdk/react": "^4.0.44",
+    "@react-spectrum/s2": "^1.7.1",
+    "@react-stately/data": "^3.16.1",
     "ai": "^7.0.41",
     "next": "16.2.10",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "unplugin-parcel-macros": "^0.2.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
