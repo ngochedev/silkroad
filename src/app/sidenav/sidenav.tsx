@@ -1,5 +1,4 @@
 import {SideNav, SideNavItem, SideNavItemContent, SideNavItemLink} from '@react-spectrum/s2/SideNav';
-// import {RoutedSideNav} from './RoutedSideNav';
 import {style} from '@react-spectrum/s2/style' with {type: 'macro'};
 import { RoutedSideNav } from './RoutedSideNav';
 
